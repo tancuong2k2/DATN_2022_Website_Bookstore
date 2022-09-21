@@ -1,39 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
    <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>romofyi</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
    </head>
    <!-- body -->
-   <body class="main-layout">
+   <body >
       <!-- loader  -->
+     <div th:fragment="head">
       <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+         <div class="loader"><img src="/assets/images/loading.gif" alt="#" /></div>
       </div>
       <!-- end loader -->
       <!-- header -->
@@ -45,7 +19,7 @@
                   <div class="row">
                      <div class="col-md-4">
                         <ul class="conta_icon ">
-                           <li><a href="#"><img src="images/call.png" alt="#"/>Call us: 0126 - 922 - 0162</a> </li>
+                           <li><a href="#"><img src="/assets/images/call.png" alt="#"/>Call us: 0126 - 922 - 0162</a> </li>
                         </ul>
                      </div>
                      <div class="col-md-4">
@@ -84,15 +58,15 @@
                   <div class="row d_flex">
                      <div class="col-md-4">
                         <ul class="conta_icon d_none1">
-                           <li><a href="#"><img src="images/email.png" alt="#"/> demo@gmail.com</a> </li>
+                           <li><a href="#"><img src="/assets/images/email.png" alt="#"/> sachhay@gmail.com</a> </li>
                         </ul>
                      </div>
                      <div class="col-md-4">
-                        <a class="logo" href="#"><img src="images/logo.png" alt="#"/></a>
+                        <a class="logo" href="#"><img src="/assets/images/logo-sach.png" alt="#"/></a>
                      </div>
                      <div class="col-md-4">
                         <ul class="right_icon d_none1">
-                           <li><a href="#"><img src="images/shopping.png" alt="#"/></a> </li>
+                           <li><a href="/cart"><img src="/assets/images/shopping.png" alt="#"/></a> </li>
                            <a href="#" class="order">Order Now</a> 
                         </ul>
                      </div>
@@ -110,7 +84,7 @@
                            <div class="collapse navbar-collapse" id="navbarsExample04">
                               <ul class="navbar-nav mr-auto">
                                  <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home</a>
+                                    <a class="nav-link" href="/admin/index">Home</a>
                                  </li>
                                  <li class="nav-item">
                                     <a class="nav-link" href="about.html">About</a>
@@ -119,14 +93,18 @@
                                     <a class="nav-link" href="products.html">Products</a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="fashion.html">Fashion</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="news.html">News</a>
-                                 </li>
-                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Contact Us</a>
                                  </li>
+                                 <li class="nav-item dropdown">
+        							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          								Account
+        							</a>
+        							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          								<a class="dropdown-item" href="#">INFORMATION</a>
+          								<a class="dropdown-item" href="/login">LOG IN</a>
+          								<a class="dropdown-item" href="#">LOG OUT</a>
+        							</div>
+      							 </li>
                               </ul>
                            </div>
                         </nav>
@@ -147,24 +125,8 @@
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
-      <section class="banner_main">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-8">
-                  <div class="text-bg">
-                     <h1> <span class="blodark"> Romofyi </span> <br>Trands 2019</h1>
-                     <p>A huge fashion collection for ever </p>
-                     <a class="read_more" href="#">Shop now</a>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="ban_img">
-                     <figure><img src="images/ban_img.png" alt="#"/></figure>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
+      
+    </div>
       <!-- end banner -->
       <!-- six_box section -->
   </body>
